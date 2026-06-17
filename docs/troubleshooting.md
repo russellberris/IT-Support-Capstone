@@ -16,6 +16,6 @@ While working on the Capstone documentation in Microsoft Word (Online), I wanted
 * **Versioning:** Relying on autosave in a single cloud instance is a risk during network instability. Moving forward, I will utilize manual local backups.
 * **File Stability:** Avoid using proprietary "Reader Modes" when working with documents containing complex elements like cross-references or footnotes.
 * **Technical Agility:** By utilizing different file formats (PDF, DOCX) and platforms (Office 365, .docx > PDF conversion, PDF > .docx conversion), I was able to decouple the content from the corrupted formatting.
-*
+
 ## Final Thoughts
 In retrospect, I probably tried to get too fancy in my formatting when I attempted in Microsoft 365 (cloud-based) Word to add footnotes. I clicked on a reader/view mode that I knew nothing about in an attempt to view my footnote I had just typed. In the future, I will stick to what I know inside MS Word, and not go snooping around into modes I am unfamiliar with.  The cloud environment of MS Office can be a little trickier than the conventional home-licensed MS Office that I grew up on in the 90s and 2000s. I realized my word processing skills are a little rusty, and that I should simplify my approach in order to not only avoid crashes like that in the future, but to finish my project on time. (I started on June 17th, and the project is due at graduation on the 26th.)

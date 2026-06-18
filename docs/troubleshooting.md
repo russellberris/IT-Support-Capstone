@@ -1,5 +1,5 @@
-# 6/17/26 Day 1
-  # Issue 1: Corrupted MS Word Document (XML/Footnote Error)
+# ***6/17/26 - Day 1***
+  # Issue #1: Corrupted MS Word Document (XML/Footnote Error)
 
 ## Problem Statement
 While working on the Capstone documentation in Microsoft Word (Online), I wanted to add a footnot explaining one of my instruction steps. In that step, I termed Per Scholas as "the company", and wanted to add an explanatory footnote that the word "company" refers to Per Scholas in the context of their instructions on how to complete the assignment, and not to an actual real-world business.  In an effort to view the footnote I had created, which had disappeared for some unknown reason, I switched to another view mode I was unfamiliar with, and a `file synchronization error` occurred, resulting in the file becoming read-only and displaying a `document contains footnotes that are invalid` error. Standard interface controls (Ribbon, Save As) were locked, preventing access to the content. The Esc key did nothing, and the page provided no `Undo` option. I used Google Gemini to walk me through how to recover my work.
@@ -21,8 +21,8 @@ While working on the Capstone documentation in Microsoft Word (Online), I wanted
 ## Final Thoughts
 In retrospect, I probably tried to get too fancy in my formatting when I attempted in Microsoft 365 (cloud-based) Word to add footnotes. I clicked on a reader/view mode that I knew nothing about in an attempt to view my footnote I had just typed. In the future, I will stick to what I know inside MS Word, and not go snooping around into modes I am unfamiliar with.  The cloud environment of MS Office can be a little trickier than the conventional home-licensed MS Office that I grew up on in the 90s and 2000s. I realized my word processing skills are a little rusty, and that I should simplify my approach in order to not only avoid crashes like that in the future, but to finish my project on time.
 
-# 6/17/26 Day 1
-  # Issue 2: List Formatting XML Validation Error
+# ***6/17/26 Day 1***
+  # Issue #2: List Formatting XML Validation Error
 *   **Symptom:** "Couldn't save highlighted changes" error triggered only when typing within an indented numbered list.
 *   **Root Cause:** Corrupted `List Definition ID` in the document's underlying XML schema. The document was attempting to map new text to a list structure imported/malformed during PDF conversion.
 *   **Resolution:** Cleared existing style formatting and re-initialized the list structure using the native ribbon controls. This forced a regeneration of the list's XML schema, bypassing the validation conflict.

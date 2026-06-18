@@ -14,7 +14,8 @@ To fully resolve the formatting instability, a granular, manual transfer process
 2.  **Piece-by-piece transfer:** Instead of a bulk "Select All" copy-paste operation (which often carries over hidden metadata and corruption), content was transferred piece-by-piece.
 3.  **Clean Paste:** Each piece was pasted using the **"Paste without formatting"** command to ensure no corrupted styles or XML tags were transferred from the previous, damaged versions.
 
-## Lessons Learned
-- **Granularity equals safety:** While transferring data piece-by-piece is significantly slower, it is the safest method when dealing with corrupted files, as it prevents the propagation of underlying formatting errors.
-- **The "Clean Slate" principle:** When all automated repair attempts fail, it is often more efficient to rebuild the document from scratch rather than continuously attempting to patch corrupted files.
-- **Scalability of the lesson:** This principle—that manual, careful reconstruction is superior to patching damaged systems—applies equally to the larger project architecture and should be considered for future structural integrity issues.
+## *Lessons Learned*
+* <ins>**Manual Reconstruction is Finality</ins> -** When automated formatting tools fail to resolve document-level corruption, manual reconstruction is the most efficient path to stability. Stripping away legacy formatting prevents the "ghost" section breaks and XML errors from propagating to new versions.
+* <ins>**Granularity equals safety</ins> -** While transferring data piece-by-piece is significantly slower, it is the safest method when dealing with corrupted files, as it prevents the propagation of underlying formatting errors.
+* <ins>**The "Clean Slate" principle</ins> -** When all automated repair attempts fail, it is often more efficient to rebuild the document from scratch rather than continuously attempting to patch corrupted files.
+* <ins>**Scope Application</ins> -** This principle of "building from scratch" is not limited to text formatting; it is a scalable approach for broader project management. When foundational components (in this case, document structure) are compromised, attempting to patch over errors often leads to problems. Rebuilding from the foundation up ensures long-term project stability.

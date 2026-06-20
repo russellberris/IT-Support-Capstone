@@ -1,18 +1,24 @@
 Day 3 - 6/20/26 2:40pm Issue #4
-* Problem: Client VM boots to a black screen inside VB (VirtualBox), the VM status says "Running."
-* Hypothesis: Gemini says likely cause is Hyper-V conflict - Windows's virtualization features use the same VT-x/AMD-V hardware that VB needs. This leads to a "nested virtualization." The Win Server VM works fine as it does not enforce/enable requirements of Win 11: TPM 2.0 and Secure Boot. When VB refuses to boot the Win 11 VM, it is because it does not detect these security requirements. Since the other VM is working fine, the problem is likely with the requirements of the specific VM of Win 11 and not with any host virtualization infrastructure.
-* Test of Hypothesis: Enable "EFI(special OSes only)" in VB settings - couldn't find that option, but moved on and verified VM had the following settings:
-  - 2 processors [X]
-  - TPM v2.0 [x]
-  - Secure Boot enabled [ x ]
-  - > Screen settings - changed Graphics Controller VBoxVGA > VMSVGA
-  - 3D Acceleration disabled [x]
+## Problem
+A Windows 11 virtual machine (VM) in VirtualBox failed to boot, remaining stuck on a black screen despite being reported as "Running." This issue occurred in an environment where a Windows Server 2022 VM was already functioning correctly, indicating that the host's virtualization infrastructure was stable but the specific Windows 11 VM configuration was incompatible.
 
-Tried to boot again
+## Root Cause/Diagnosis
+Eureka! It worked. 🥳 
+The issue was identified as a display configuration incompatibility. Windows 11 has stricter hardware and display requirements than Windows Server 2022, particularly with graphics driver compatibility within VirtualBox. While virtualization prerequisites (TPM 2.0 and Secure Boot) were correctly configured, the default Graphics Controller setting (`VBoxVGA`) was incompatible with the Windows 11 guest environment, resulting in a black screen during boot.
 
-Eureka! It worked. 🥳
+## Resolution
+The problem was resolved by adjusting the VM's display settings:
+1.  **Checklist of Settings:** The following configuration was verified:
+    * **Processors:** Assigned 2+ cores [X]
+    * **TPM:** Set to v2.0 [X]
+    * **Secure Boot:** Enabled [X]
+    * **3D Acceleration:** Disabled [X]
+2.  **Display Configuration:** Navigated to **Settings > Display > Screen**.
+3.  **Graphics Controller Change:** The controller was manually switched from the default `VBoxVGA` to `VMSVGA`. This change allowed the VM to properly interface with the virtualized display hardware, successfully allowing the boot process to complete. This was a specific setting adjustment that would not have been identified without online guidance. 
 
-* Solution: Apparently changing graphics controller in the screen settings from VBoxVGA to VMSVGA was enough. 
 
-
-* Lessons Learned: Ask Gemini and you may have your problem fixed in a few minutes (30 minutes with documentation time)
+## *Lessons Learned*
+* <ins>**Consultation Accelerates Troubleshooting</ins> -** Asking the right questions in my online guidance allowed for the identification of a specific, non-obvious setting (the Graphics Controller) that resolved the issue in a few minutes.
+* <ins>**Systematic Verification is Essential</ins> -** Creating a checklist of prerequisites (TPM, Secure Boot, CPU allocation) ensures that foundational requirements are met before testing specific variables like display controllers.
+* <ins>**Graphics Controller Sensitivity</ins> -** Different guest operating systems in VirtualBox have varying dependencies for display drivers; switching from legacy controllers (VBoxVGA) to modern ones (VMSVGA) is a critical step when debugging black-screen boot failures.
+* <ins>**Scope Application</ins> -** The method of logically rooting out the issue by isolating variables (verifying that other VMs work to rule out host issues, then methodically testing specific configuration settings) is a valuable troubleshooting skill for any professional IT Support environment.

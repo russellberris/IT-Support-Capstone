@@ -44,3 +44,38 @@ This will bypass the "Network" discovery service entirely and connect you direct
 [DID IT ON CLIENT VM - WORKED!]
 [FILE SHARES ARE ONLY VISIBLE ON CLIENT BUT THAT MAY BE ENOUGH TO PROCEED WITH PROJECT - WILL CHECK AND REPORT BACK TO THIS DOC]
 
+ok my fileshare is partly active, it is accessible from client machine but still invisible in server vm, what is wrong
+
+It is common for a file share to be accessible via direct path (e.g., \\ServerName\ShareName) while remaining "invisible" in the Network browser. If you can access it from a client, the share itself is correctly configured and the server is functioning properly.
+The issue typically stems from Network Discovery settings, specific Windows services responsible for browsing, or how the server handles its own network stack.
+
+1
+Ensure these services are set to Automatic (Delayed Start) and are Running:
+
+a Function Discovery Provider Host (fdPHost)
+b Function Discovery Resource Publication (FDResPub)
+c SSDP Discovery (SSDPSrv) 
+d UPnP Device Host (upnphost)
+
+[A AND B WERE PREVIOUSLY ENABLED, C AND D WERE DISABLED]
+[ENABLED C AND D AS AUTOMATIC THEN STARTED THEM]
+
+2
+Check Network Discovery Settings
+The server must be set to allow itself to be discovered, even if it is the host.
+Open Control Panel > Network and Sharing Center > Change advanced sharing settings.  
+Ensure Turn on network discovery is selected under your current network profile (Private/Domain).  
+Ensure Turn on file and printer sharing is selected.
+[DID IT - ALL ARE ON]
+
+3
+If you are on the Server VM itself and trying to see the share in "Network," it is common for the Windows operating system to hide its own shares from its own browser.
+
+Direct Access: Always verify connectivity by typing the UNC path directly into the address bar: \\127.0.0.1\ShareName or \\LocalHost\ShareName. If this works, the share is healthy.
+
+[DID IT - SUCCESS! SCREENSHOTTED ACCESSING SHAREDDATA 2 WAYS - WITH LOOPBACK IP 127.0.0.1 AND WITH VM IP 192.168.10.10]
+
+
+
+
+

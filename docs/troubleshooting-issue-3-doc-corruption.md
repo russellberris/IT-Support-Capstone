@@ -1,4 +1,4 @@
-# Issue #1: Corrupted MS Word Document (XML/Footnote Error) - Resolving Persistent MS Word Document Corruption
+# Issue #3: Resolving Persistent MS Word Document Corruption
 
 ## Problem
 The web-based version of Microsoft Word exhibited persistent, unresolvable issues with page numbering and header formatting. These issues stemmed from a corrupted document history, originally triggered by an XML footnote crash.

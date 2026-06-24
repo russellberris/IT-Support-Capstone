@@ -1,5 +1,6 @@
 
 # Issue #4 - VM Boot Hanging on Black Screen
+## Problem
 A Windows 11 virtual machine (VM) in VirtualBox failed to boot, remaining stuck on a black screen despite being reported as "Running." This issue occurred in an environment where a Windows Server 2022 VM was already functioning correctly, indicating that the host's virtualization infrastructure was stable but the specific Windows 11 VM configuration was incompatible.
 
 ## Root Cause/Diagnosis

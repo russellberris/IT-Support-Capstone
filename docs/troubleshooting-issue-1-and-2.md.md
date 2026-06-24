@@ -1,4 +1,4 @@
-  ## Issue #1: Corrupted MS Word Document (XML/Footnote Error)
+# Issue #1: Corrupted MS Word Document (XML/Footnote Error)
 
 ### Problem
 While working on the Capstone documentation in Microsoft Word (Online), I wanted to add a footnot explaining one of my instruction steps. In that step, I termed Per Scholas as "the company", and wanted to add an explanatory footnote that the word "company" refers to Per Scholas in the context of their instructions on how to complete the assignment, and not to an actual real-world business.  In an effort to view the footnote I had created, which had disappeared for some unknown reason, I switched to another view mode I was unfamiliar with, and a `file synchronization error` occurred, resulting in the file becoming read-only and displaying a `document contains footnotes that are invalid` error. Standard interface controls (Ribbon, Save As) were locked, preventing access to the content. The Esc key did nothing, and the page provided no `Undo` option. I used Google Gemini to walk me through how to recover my work.

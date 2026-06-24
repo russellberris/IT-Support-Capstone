@@ -1,11 +1,3 @@
-$${\textsf{\color{orange}Highlighted\ Text}}$$
-```diff
-+ This sentence is green
-- This sentence is red
-! This sentence is orange
-@@ This sentence is purple @@
-```
-# 🟩 **6/17/26 Day 1**
   ## Issue #1: Corrupted MS Word Document (XML/Footnote Error)
 
 ### Problem

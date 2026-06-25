@@ -3,7 +3,7 @@ Russell Berris's Per Scholas Houston (cohort 2026-HOU-01) final capstone project
 1) Setting up and migrating a Windows server machine and a Windows client machine
 2) Purposely "breaking" the environment using provided PowerShell scripts that altered configurations and settings
 3) Documenting what was broken via provided incident tickets
-4) Resolving all tickets and restoring system functionality
+4) Resolving all incident tickets and restoring full system functionality with verification testing
 5) Concluding reflections and lessons learned.
 
 Click here to view the full Technical Report: ([Russell Berris.Capstone.PDF](https://github.com/russellberris/IT-Support-Capstone/blob/main/Russell%20Berris.Capstone.pdf))

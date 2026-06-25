@@ -6,7 +6,7 @@ Russell Berris's Per Scholas Houston (cohort 2026-HOU-01) final capstone project
 4) Resolving all tickets and restoring system functionality
 5) Concluding reflections and lessons learned.
 
- [Click here to view the full Technical Report (PDF)] (path/to/your/Russell Berris.Capstone.pdf)
+Click here to view the full Technical Report ([Russell Berris.Capstone.PDF](https://github.com/russellberris/IT-Support-Capstone/blob/main/Russell%20Berris.Capstone.pdf))
 
 ## Executive Summary: Migration & Stabilization Event
 

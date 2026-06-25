@@ -1,5 +1,12 @@
 # IT-Support-Capstone
-Russell Berris's Per Scholas Houston (cohort 2026-HOU-01) final capstone project.  Involves setting up and migrating both a Windows server machine and Windows client machine.  
+Russell Berris's Per Scholas Houston (cohort 2026-HOU-01) final capstone project.  Involved five phases: 
+1) Setting up and migrating a Windows server machine and a Windows client machine
+2) Purposely "breaking" the environment using provided PowerShell scripts that altered configurations and settings
+3) Documenting what was broken via provided incident tickets
+4) Resolving all tickets and restoring system functionality
+5) Concluding reflections and lessons learned.
+
+ [Click here to view the full Technical Report (PDF)] (path/to/your/Russell Berris.Capstone.pdf)
 
 ## Executive Summary: Migration & Stabilization Event
 
